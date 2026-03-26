@@ -1,0 +1,2 @@
+kraje_1 = read.table("kraje_makro_1.csv", header=TRUE, sep=",", dec=".")
+kraje_2 = read.table("kraje_makro_2.csv", header=TRUE, sep=",", dec=".")

@@ -1,0 +1,65 @@
+---
+title: "Zajęcia 2 – Data Science Workflow"
+author: "Student"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Libraries
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(writexl)
+```
+
+# 2. Data loading
+
+```{r}
+kraje <- read.csv("kraje.csv")
+head(kraje)
+```
+
+# 3. Structure and summary
+
+```{r}
+str(kraje)
+summary(kraje)
+```
+
+# 4. Missing values
+
+```{r}
+colSums(is.na(kraje))
+```
+
+# 5. Numeric data
+
+```{r}
+kraje_num <- kraje %>% select(where(is.numeric))
+kraje_num
+```
+
+# 6. Correlation
+
+```{r}
+cor(kraje_num)
+```
+
+# 7. Plots
+
+```{r}
+hist(kraje_num[[1]])
+boxplot(kraje_num[[2]])
+plot(kraje_num[[1]], kraje_num[[2]])
+```
+
+# 8. Linear regression
+
+```{r}
+model <- lm(kraje_num[[1]] ~ kraje_num[[2]])
+summary(model)
+```
