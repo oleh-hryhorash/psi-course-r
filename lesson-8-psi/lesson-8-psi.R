@@ -319,4 +319,16 @@ ggplot(documents_clusters, aes(x = reorder(Dokument, Klaster), fill = Klaster)) 
 
 
 
+# OdpowiedŸ 1:
+# Tak, na podstawie chmur s³ów mo¿na wnioskowaæ o treœci dokumentów,
+# poniewa¿ najwiêksze s³owa wskazuj¹ na dominuj¹ce tematy w klastrach.
+# Analiza najczêstszych s³ów pozwala okreœliæ, o czym s¹ dokumenty,
+# choæ jest to przybli¿ona interpretacja.
+
+# OdpowiedŸ 2:
+# Na podstawie chmur s³ów mo¿na wyró¿niæ ogólne obszary tematyczne,
+# takie jak: technologia, biznes/ekonomia oraz spo³eczeñstwo/polityka.
+# Liczba obszarów tematycznych odpowiada liczbie klastrów (np. 3 lub 4),
+# jednak ich interpretacja zale¿y od dominuj¹cych s³ów w ka¿dym klastrze.
+
 
